@@ -1,0 +1,18 @@
+name: Scheduled Health Check
+
+# Controls when the action will run.
+on:
+  schedule:
+    - cron: "0,15,30,45 * * * *"
+
+jobs:
+  health_check_job:
+    runs-on: ubuntu-latest
+    name: Check all sites
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        
+      - name: Run Shell Script
+        id: shell_script_run
+        run: bash ./health-check.sh
