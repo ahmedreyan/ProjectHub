@@ -1,0 +1,4 @@
+streamlit==1.10.0
+Pillow==9.0.1
+# Note: The google.generativeai library is not available in public repositories.
+# You may need to install it from a private repository or directly from Google, if available.
